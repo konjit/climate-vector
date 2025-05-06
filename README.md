@@ -9,8 +9,10 @@ It shows how greenhouse gases have increased; mostly because of human activities
 - Uses charts and cards to show data clearly  
 - Shows the growth rate of greenhouse gases like CO₂, CH₄, N₂O, and SF₆  
 - Tracks ice mass loss in Antarctica and Greenland, and ocean mass changes   
-- Lets users select year range and factor (like CO₂ or CH₄) to explore trends  
+- Lets users select factor (like CO₂ or CH₄) to explore trends  
 - Shows air quality of user's location or searched city using coordinates or city name  
+- Let the user to choose a theme of their preference with toggle
+- Let the users use tooltips to explain potentially unfamiliar words to the user
 
 ## Tech Used
 

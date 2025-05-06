@@ -1,30 +1,33 @@
 import { NavLink } from "react-router-dom";
-import ThemeToggle from "../theme/ThemeToggle"
+import ThemeToggle from "../../theme/ThemeToggle";
 import "../../styles/Navbar.css";
 import { useState, useEffect } from "react";
+import { Bell } from "lucide-react";
 
 const Navbar = () => {
-    const [isDark, setIsDark] = useState(() => {
-      return localStorage.getItem("theme") === "dark";
-    });
   
-    useEffect(() => {
-      document.documentElement.classList.toggle("dark", isDark);
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    }, [isDark]);
+  const [isDark, setIsDark] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDark);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }, [isDark]);
 
   return (
     <header>
       <div className="navbar-container">
-        <NavLink
-          to="/infoboard"
-          // mental note window.location.pathname === "/infoboard"
-          className={({ isActive }) =>
-            `brand ${isActive ? "active-brand" : ""}`
-          }
-        >
-          ClimateVector
-        </NavLink>
+        <div className="brand-container">
+          <NavLink
+            to="/infoboard"
+            className={({ isActive }) =>
+              `brand ${isActive ? "active-brand" : "brand"}`
+            }
+          >
+            ClimateVector
+          </NavLink>
+        </div>
 
         <nav>
           <ul className="navbar-list">
@@ -35,12 +38,22 @@ const Navbar = () => {
                   `navbar-link ${isActive ? "active-link" : ""}`
                 }
               >
-                Charts
+                Data & Charts
               </NavLink>
             </li>
           </ul>
         </nav>
-        <ThemeToggle checked={isDark} onChange={setIsDark} />
+        <div className="theme-toggle-container">
+          <Bell
+            size={20}
+            style={{
+              color: "var(--primary-color)",
+            }}
+          />
+        </div>
+        <div className="theme-toggle-container">
+          <ThemeToggle checked={isDark} onChange={setIsDark} />
+        </div>
       </div>
     </header>
   );

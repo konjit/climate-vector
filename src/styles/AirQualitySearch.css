@@ -1,0 +1,37 @@
+.city-input-container {
+  display: flex;
+  margin: 2rem 0;
+  width: 50%;
+  flex-grow: 1;
+  position: relative;
+  display: inline-block;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  color: var(--primary-color);
+  pointer-events: none;
+}
+
+.air-quality-city {
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  outline: none;
+  background-color: var(--surface-color);
+  box-sizing: border-box;
+  caret-color: var(--text-color)
+}
+
+.air-quality-city::placeholder {
+  color: var(--text-color);
+}
+
+.air-quality-city:focus {
+  border: 1px solid var(--primary-color);
+}

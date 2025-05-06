@@ -41,9 +41,9 @@
 
 .btn-show {
   float: right;
-  margin-right: 1rem;
   margin-bottom: 1;
 }
+
 @media (max-width: 768px) {
   .info-card {
     flex: 1 1 100%;

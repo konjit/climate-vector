@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FactorData from "../components/charts/FactorData";
-import GasIntro from "../components/factors/FactorIntro";
+import FactorIntro from "../components/factors/FactorIntro";
 import { useEffect } from "react";
 
 import "../styles/Charts.css";
@@ -23,13 +23,14 @@ const factorOptions = {
 };
 
 const factorColors = [
-  "#00bcd4",
-  "#9c27b0",
-  "#4caf50",
-  "#ff7043",
-  "#29b6f6",
-  "#206e79",
+  {code:"#00bcd4", name:"Cyan"},
+  {code:"#9c27b0", name:"Purple"},
+  {code:"#4caf50", name:"Green"},
+  {code:"#ff7043", name:"Coral"},
+  {code:"#29b6f6", name:"Light Blue"},
+  {code:"#206e79", name:"Teal (Dark)"}
 ];
+
 
 function Charts() {
   const [factor, setFactor] = useState("co2");
@@ -42,7 +43,7 @@ function Charts() {
   
   return (
     <>
-      <GasIntro />
+      <FactorIntro />
 
       <div className="input-group">
         <select onChange={({ target }) => setFactor(target.value)}>
@@ -61,8 +62,8 @@ function Charts() {
         </select>
         <select onChange={({ target }) => setColor(target.value)}>
           {factorColors.map((color) => (
-            <option key={color} value={color}>
-              {color}
+            <option key={color.code} value={color.code}>
+              {color.name}
             </option>
           ))}
         </select>

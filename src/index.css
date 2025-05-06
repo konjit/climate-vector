@@ -6,7 +6,9 @@
   --surface-color: #fefefe;
   --text-color: #424242;
   --btn-hover-color: #0d6eaf;
-
+  --default-hover:  #0d6eaf;
+  --link-active: #005c99;
+  
   --warming-accent: #e65100;
   --error-color: rgb(228, 75, 75);
   --positive-accent: #1b5e20;
@@ -22,6 +24,8 @@
   --glaciers-accent: #206e79;
 
   --default-border-radius: 8px;
+  --small-border-radius: 4px;
+  --default-text-weight: 600;
   --nav-box-shadow-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -30,7 +34,9 @@
   --bg-color: #121212;
   --surface-color: #2e2c2c;
   --text-color: #e0e0e0;
+  --default-hover:  rgb(247, 145, 145);
 
+  --link-active:  rgb(235, 105, 105);
   --warming-accent: #ff6f00;
   --error-color: rgb(228, 75, 75);
   --positive-accent: #66bb6a;
@@ -59,7 +65,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;
   background: var(--bg-color);
 }
 
@@ -82,16 +88,15 @@ main {
   border-radius: var(--default-border-radius);
   cursor: pointer;
 }
+
 .btn:hover {
-  background-color: var(--primary-color);
-  color: #fff;
-}
-.active-btn {
-  background-color: var(--ocean-accent);
-  color: #fff;
+  background-color: var( --default-hover);
 }
 
 @media (max-width: 768px) {
+  main{
+    margin: 0rem 1rem;
+  }
   .content {
     flex-direction: column;
   }

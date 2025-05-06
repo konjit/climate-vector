@@ -8,37 +8,38 @@ import { useEffect, useState, useCallback } from "react";
  *   loading: stores the progress of fetching data initially set true.
  */
 const useFetch = (endPoint) => {
-    const [data, setData] = useState([]);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
-  
-    useEffect(() => {
-      const controller = new AbortController();
-      const fetchData = async () => {
-        try {
-          setLoading(true);
 
-          const response = await fetch(endPoint, { signal: controller.signal });
-          if (!response.ok) 
-            throw new Error("Failed to fetch");
-          const data = await response.json();
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-          setData(data);
-        } catch (error) {
-          if (error.name !== 'AbortError') {
-            setError(error.message);
-          }
-        } finally {
-          setLoading(false);
+  useEffect(() => {
+    if (!endPoint) return;
+    const controller = new AbortController();
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+
+        const response = await fetch(endPoint, { signal: controller.signal });
+        if (!response.ok) throw new Error("Failed to fetch");
+        const data = await response.json();
+
+        setData(data);
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          setError(error.message);
         }
-      };
-  
-      fetchData();
-      
-      return () => controller.abort();
-    }, [endPoint]);
-  
-    return { data, error, loading };
-  };
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+
+    return () => controller.abort();
+  }, [endPoint]);
+
+  return { data, error, loading };
+};
 
 export default useFetch;

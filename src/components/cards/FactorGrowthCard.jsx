@@ -1,8 +1,8 @@
 import { TrendingUp, TrendingDown, Calendar, Gauge } from "lucide-react";
-import useFetch from "../hooks/useFetch";
-import Loading from "./templates/Loading";
-import { ROOT_END_POINT } from "../config";
-import "../styles/GrowthCard.css";
+import useFetch from "../../hooks/useFetch";
+import Loading from "../templates/Loading";
+import { ROOT_END_POINT } from "../../config";
+import "../../styles/FactorGrowthCard.css";
 
 const FactorGrowthCard = ({ factor, query }) => {
   const endPoint = `${ROOT_END_POINT}/${factor}/${query}`;
