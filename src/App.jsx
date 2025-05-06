@@ -6,24 +6,26 @@ import Charts from "./pages/Charts";
 import InfoBoard from "./pages/InfoBoard";
 import NoMatch from "./components/templates/NoMatch";
 import Footer from "./components/templates/Footer";
-import AirQualityChecker from "./pages/AirQualityChecker";
+
+import AirQualitySearch from "./components/cards/AirQualitySearch";
 
 function App() {
   return (
     <>
-
-        <Navbar />
-        <main>
-          <Routes>
-            <Route path="/" element={<InfoBoard />} />
-            <Route path="/infoboard" element={<InfoBoard />} />
-            <Route path="/charts" element={<Charts />} />
-            <Route path="/airs" element={<AirQualityChecker />} />
-            <Route path="*" element={<NoMatch />} />
-          </Routes>
-        </main>
-        <Footer />
+      <Navbar />
+      <main>
+      <div className="search-wrapper">
+        <AirQualitySearch />
+      </div>
      
+        <Routes>
+          <Route path="/" element={<InfoBoard />} />
+          <Route path="/infoboard" element={<InfoBoard />} />
+          <Route path="/charts" element={<Charts />} />
+          <Route path="*" element={<NoMatch />} />
+        </Routes>
+      </main>
+      <Footer />
     </>
   );
 }

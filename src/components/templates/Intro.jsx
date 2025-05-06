@@ -1,7 +1,7 @@
-import { Globe, Thermometer, BarChart, AlertTriangle } from "lucide-react";
+import { Globe, Thermometer, AlertTriangle } from "lucide-react";
 import greenhouseAnimation from "../../assets/greenhouse-effect.gif";
 import { Tooltip } from "react-tooltip";
-import "../../styles/Intro.css"
+import "../../styles/Intro.css";
 
 const Intro = () => {
   return (
@@ -10,28 +10,16 @@ const Intro = () => {
         <div className="text-content">
           <h1>
             <Globe size={28} />
-            Climate Change Tracker
+            Climate Change 
           </h1>
 
           <div className="paragraph">
             <Thermometer size={44} />
             <p>
-              Global temperatures have risen by about <span className="temp-color">1.1°C </span>since pre-industrial
+              Global temperatures have risen by about{" "}
+              <span className="temp-color">1.1°C </span>since pre-industrial
               times, with human activities accounting for roughly 1.0°C of that
               increase.
-            </p>
-          </div>
-
-          <div className="paragraph">
-            <BarChart size={44} />
-            <p>
-              This infoboard provides general information about greenhouse gases
-              <span className="co2-color"> CO₂</span>,{" "}
-              <span className="ch4-color">CH₄</span>,{" "}
-              <span className="n2o-color">N₂O</span>, and{" "}
-              <span className="sf6-color">SF₆</span> and their concentrations.
-              It also highlights key indicators like temperature anomalies and
-             <span className="ice-color"> ice mass loss</span>  caused by global warming.
             </p>
           </div>
 
@@ -72,8 +60,11 @@ const Intro = () => {
             src={greenhouseAnimation}
             alt="Greenhouse effect visualization"
           />
-          <figcaption> The above is an animation of how sunlight rays are trapped by greenhouse gases. 
-        Credit: NASA/JPL-Caltech</figcaption>
+          <figcaption>
+            {" "}
+            The above is an animation of how sunlight rays are trapped by
+            greenhouse gases. Credit: NASA/JPL-Caltech
+          </figcaption>
         </figure>
       </div>
     </section>

@@ -2,57 +2,73 @@ header {
   background-color: var(--bg-color);
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px var(--nav-box-shadow-color);
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 2000;
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
-  margin: 0rem 2rem;
   justify-content: space-between;
-  align-items: stretch;
+  gap: 1rem;
 }
 
 .brand {
   font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--primary-color);
+  font-weight: var(--default-text-weight);
+  color: var(--text-color);
   text-decoration: none;
   letter-spacing: 1px;
 }
 
+.active-brand {
+  color: var(--link-active);
+}
+
 nav {
   flex-grow: 1;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .navbar-list {
   display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .navbar-link {
-  display: flex;
   text-decoration: none;
   color: var(--text-color);
-  font-weight: var(--text-weight);
-  text-transform: uppercase;
-  align-items: center;
-  padding: 0.25rem;
-  transition: color 0.2s ease;
+  font-weight: var(--default-text-weight);
+  transition: color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
 }
 
 .navbar-link:hover,
 .active-link {
-  color: var(--primary-color);
-  font-weight: 500;
+  color: var(--link-active);
+  border-bottom-color: var(--link-active);
 }
 
-.navbar-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
+@media (max-width: 820px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }

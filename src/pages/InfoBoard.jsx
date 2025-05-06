@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Intro from "../components/templates/Intro";
-import FactorGrowthCard from "../components/FactorGrowthCard";
+import FactorGrowthCard from "../components/cards/FactorGrowthCard";
 import CO2InfoCard from "../components/factors/CO2InfoCard";
+import { BarChart } from "lucide-react";
 
 import "../styles/InfoBoard.css";
 
@@ -66,11 +67,20 @@ const InfoBoard = () => {
   return (
     <>
       <Intro />
-      <p className="headline-para">
-        Below are all the factors that contributed to global warming, along with
-        their consequences, shown from the earliest recorded data to the
-        present.
-      </p>
+
+      <div className="paragraph">
+        <BarChart color="var(--text-color)" size={44} />
+        <p className="headline-para">
+          This infoboard provides general information about greenhouse gases
+          <span className="co2-color"> CO₂</span>,{" "}
+          <span className="ch4-color">CH₄</span>,{" "}
+          <span className="n2o-color">N₂O</span>, and{" "}
+          <span className="sf6-color">SF₆</span> and their concentrations. It
+          also highlights key indicators like temperature anomalies and
+          <span className="ice-color"> ice mass loss</span> caused by global
+          warming.
+        </p>
+      </div>
       <section className="factors-container"> {visibleSection}</section>
       <button
         className="btn btn-show"
