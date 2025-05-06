@@ -17,7 +17,6 @@ It shows how greenhouse gases have increased; mostly because of human activities
 - React – building the UI  
 - React Router – for routing  
 - recharts – for all charts  
-- CSS Variables / Modules – for styling and theming  
 - Lucide Icons – for nice-looking icons  
 - OpenWeather API – for air quality data  
 - ClimateMonitor API – for all climate-related data  
