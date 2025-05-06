@@ -1,12 +1,32 @@
-# React + Vite
+# 🌎 ClimateVector
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ClimateVector** is a web application made to help people understand Earth’s climate change (also known as global warming).  
+It shows how greenhouse gases have increased; mostly because of human activities and the results, like temperature rise, ice melting, and ocean mass changes.
 
-Currently, two official plugins are available:
+## What It Does
+ 
+- Displays data from when it was first recorded up to now for all factors 
+- Uses charts and cards to show data clearly  
+- Shows the growth rate of greenhouse gases like CO₂, CH₄, N₂O, and SF₆  
+- Tracks ice mass loss in Antarctica and Greenland, and ocean mass changes   
+- Lets users select year range and factor (like CO₂ or CH₄) to explore trends  
+- Shows air quality of user's location or searched city using coordinates or city name  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Used
 
-## Expanding the ESLint configuration
+- React – building the UI  
+- React Router – for routing  
+- recharts – for all charts  
+- CSS Variables / Modules – for styling and theming  
+- Lucide Icons – for nice-looking icons  
+- OpenWeather API – for air quality data  
+- ClimateMonitor API – for all climate-related data  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Data Sources
+
+- [ClimateMonitor API](https://climatemonitor.info/api/public/v1) – for CO₂, CH₄, N₂O, SF₆ levels, temperature anomalies, glacier and ocean mass loss  
+- [OpenWeather Air Pollution API](https://openweathermap.org/api/air-pollution) – for air quality by coordinates or city name  
+
+---
+
+This app is still improving, more features and visuals will be added over time.
