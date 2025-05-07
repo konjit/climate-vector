@@ -67,7 +67,7 @@ const InfoBoard = () => {
       <Intro />
 
       <div className="paragraph">
-        <BarChart color="var(--text-color)" size={44} />
+        <BarChart color="var(--primary-color)" size={44} />
         <p className="headline-para">
           This infoboard provides general information about greenhouse gases
           <span className="co2-color"> CO₂</span>,{" "}
