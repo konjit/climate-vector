@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
-import ThemeToggle from "../../theme/ThemeToggle";
-import "../../styles/Navbar.css";
 import { useState, useEffect } from "react";
+
 import { Bell } from "lucide-react";
+import ThemeToggle from "../../theme/ThemeToggle";
+
+import "../../styles/Navbar.css";
 
 const Navbar = () => {
-  
   const [isDark, setIsDark] = useState(() => {
     return localStorage.getItem("theme") === "dark";
   });

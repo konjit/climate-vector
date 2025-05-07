@@ -9,6 +9,9 @@ import {
 } from "recharts";
 
 const CustomAreaChart = ({ data: factorData, color, dataKey = "value" }) => {
+
+  if (!factorData?.data) return <div>No data</div>;
+  
   const {
     data: { readings, title, description, unit, lastUpdate },
   } = factorData;

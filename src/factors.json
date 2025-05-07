@@ -1,0 +1,42 @@
+[
+    {
+      "id": "co2",
+      "title": "CO₂ (Carbon Dioxide)",
+      "info": "Mainly caused by fossil fuel combustion, deforestation, and industrial processes.",
+      "contribution": "76%"
+    },
+    {
+      "id": "ch4",
+      "title": "CH₄ (Methane)",
+      "info": "Released from livestock, landfills, and natural gas production.",
+      "contribution": "16%"
+    },
+    {
+      "id": "n2o",
+      "title": "N₂O (Nitrous Oxide)",
+      "info": "Emitted from agricultural activities and industrial processes.",
+      "contribution": "6%"
+    },
+    {
+      "id": "sf6",
+      "title": "SF₆ (Sulfur Hexafluoride)",
+      "info": "A potent greenhouse gas used in electrical insulation and electronics.",
+      "contribution": "<1%"
+    },
+    {
+      "id": "temp",
+      "title": "Temperature Anomalies",
+      "info": "Indicate long-term global warming trends due to greenhouse gas emissions."
+    },
+    {
+      "id": "ice",
+      "title": "Ice Mass Loss",
+      "info": "Caused by rising global temperatures, leading to glacier and polar ice melt."
+    },
+    {
+      "id": "snow",
+      "title": "Snow Mass Loss",
+      "info": "Decline in snowpack due to shorter winters and rising temperatures."
+    }
+  ]
+  

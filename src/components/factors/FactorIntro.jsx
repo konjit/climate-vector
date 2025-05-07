@@ -4,8 +4,8 @@ import {
   CalendarRange,
   LineChart,
   Thermometer,
-  Calendar,
 } from "lucide-react";
+
 import "../../styles/Charts.css";
 
 const FactorIntro = () => {
@@ -14,7 +14,7 @@ const FactorIntro = () => {
       <article>
         <h1>
           <Factory size={24} color="var(--primary-color)" /> Greenhouse Gas
-          Trends & Global Temperature Anomalies
+          Trends & Temperature Anomalies
         </h1>
 
         <p>
@@ -23,11 +23,13 @@ const FactorIntro = () => {
             color="var(--primary-color)"
             style={{ marginRight: "6px", verticalAlign: "middle" }}
           />
-          This page visualizes atmospheric greenhouse gases (   <span className="co2-color"> CO₂</span>,{" "}
+          This page helps you to see the trend of atmospheric greenhouse gases (
+          <span className="co2-color"> CO₂</span>,{" "}
           <span className="ch4-color">CH₄</span>,{" "}
           <span className="n2o-color">N₂O</span>, and{" "}
-          <span className="sf6-color">SF₆</span>) using long-term data from NOAA and NASA. You can explore both
-          global and location-based records, covering decades of climate trends.
+          <span className="sf6-color">SF₆</span>) using long-term data from NOAA
+          and NASA. You can explore both global and location-based records,
+          covering decades of climate trends.
         </p>
 
         <p>
@@ -64,7 +66,7 @@ const FactorIntro = () => {
         </p>
 
         <p>
-          <Calendar
+          <LineChart
             size={18}
             color="var(--primary-color)"
             style={{ marginRight: "6px", verticalAlign: "middle" }}

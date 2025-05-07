@@ -1,8 +1,10 @@
+import { TrendingUp, TrendingDown, Calendar, Gauge } from "lucide-react";
+
 import useData from "../../hooks/useData";
 import AnimateValue from "../../utils/AnimateValue";
 import Loading from "../templates/Loading";
-import { TrendingUp, TrendingDown, Calendar, Gauge } from "lucide-react";
 import { ROOT_END_POINT } from "../../config";
+
 import "../../styles/Charts.css"
 
 const CO2InfoCard = ({ gasName, startYear="2024", endYear="2011" }) => {

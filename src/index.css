@@ -4,22 +4,26 @@
   --primary-color: #005c99;
   --bg-color: #f5f5f5;
   --surface-color: #fefefe;
+  --surface-hover-color: #e7ebe7;
+  
   --text-color: #424242;
   --btn-hover-color: #0d6eaf;
-  --default-hover:  #0d6eaf;
+  --default-hover: #0d6eaf;
   --link-active: #005c99;
-  
+
   --warming-accent: #e65100;
   --error-color: rgb(228, 75, 75);
-  --positive-accent: #1b5e20;
- 
+
+  --positive-accent: rgba(99, 141, 102, 0.75);
+  --negative-accent: rgba(255, 112, 67, 0.75);
+
   --co2-accent: #ff3d3d;
   --ch4-accent: #00bcd4;
   --n2o-accent: #9c27b0;
   --sf6-accent: #4caf50;
   --ice-accent: #01579b;
 
-  --temp-accent: #ff7043;
+  --temp-accent: #5eb97b;
   --ocean-accent: #29b6f6;
   --glaciers-accent: #206e79;
 
@@ -33,13 +37,17 @@
   --primary-color: rgb(235, 105, 105);
   --bg-color: #121212;
   --surface-color: #2e2c2c;
+  --surface-hover-color: #383737;
   --text-color: #e0e0e0;
-  --default-hover:  rgb(247, 145, 145);
+  --default-hover: rgb(247, 145, 145);
 
-  --link-active:  rgb(235, 105, 105);
+  --link-active: rgb(235, 105, 105);
   --warming-accent: #ff6f00;
+  
   --error-color: rgb(228, 75, 75);
-  --positive-accent: #66bb6a;
+
+  --positive-accent: rgba(99, 141, 102, 0.75);
+  --negative-accent: rgba(255, 112, 67, 0.75);
 
   --co2-accent: #ff6b6b;
   --ch4-accent: #4dd0e1;
@@ -47,8 +55,8 @@
   --sf6-accent: #66bb6a;
 
   --ice-accent: #42a5f5;
-
-  --temp-accent: #ff7043;
+  --temp-accent: #5eb97b;
+  --negative-accent: #ff7043;
   --ocean-accent: #29b6f6;
   --glaciers-accent: #206e79;
   --default-border-radius: 8px;
@@ -90,11 +98,11 @@ main {
 }
 
 .btn:hover {
-  background-color: var( --default-hover);
+  background-color: var(--default-hover);
 }
 
 @media (max-width: 768px) {
-  main{
+  main {
     margin: 0rem 1rem;
   }
   .content {

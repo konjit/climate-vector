@@ -1,5 +1,4 @@
 import "./App.css";
-
 import Navbar from "./components/templates/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Charts from "./pages/Charts";
