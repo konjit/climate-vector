@@ -1,19 +1,17 @@
 import { useState } from "react";
 import Intro from "../components/templates/Intro";
 import FactorGrowthCard from "../components/cards/FactorGrowthCard";
-import CO2InfoCard from "../components/factors/CO2InfoCard";
+
 import { BarChart } from "lucide-react";
 
 import "../styles/InfoBoard.css";
 
 const InfoBoard = () => {
-  const [showAll, setShowAll] = useState(false);
-
   const sections = [
     <div key="info-section-1" className="info-section">
       <h3 className="section-title">Greenhouse Gases growth rate indicators</h3>
       <div className="info-card-container">
-        <CO2InfoCard key="co2" gasName="co2" startYear="2014" endYear="2024" />
+        {/* <CO2InfoCard key="co2" gasName="co2" startYear="2014" endYear="2024" /> */}
         <FactorGrowthCard
           key="co2-increase_ml"
           factor="co2"
@@ -21,7 +19,7 @@ const InfoBoard = () => {
         />
         <FactorGrowthCard key="ch4-growth" factor="ch4" query="growth" />
         <FactorGrowthCard key="n2o-growth" factor="n2o" query="growth" />
-        {/* <FactorGrowthCard factor="sf6" query="growth" /> */}
+        <FactorGrowthCard factor="sf6" query="growth" />
       </div>
     </div>,
 
@@ -61,7 +59,7 @@ const InfoBoard = () => {
       </div>
     </div>,
   ];
-
+  const showAll = true;
   const visibleSection = showAll ? sections : sections.slice(0, 2);
 
   return (
@@ -82,12 +80,6 @@ const InfoBoard = () => {
         </p>
       </div>
       <section className="factors-container"> {visibleSection}</section>
-      <button
-        className="btn btn-show"
-        onClick={() => setShowAll((prev) => !prev)}
-      >
-        {!showAll ? "Show More" : "Show Less"}
-      </button>
     </>
   );
 };

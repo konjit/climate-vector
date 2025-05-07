@@ -1,5 +1,5 @@
 header {
-  background-color: var(--bg-color);
+  background-color: var(--surface-color);
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px var(--nav-box-shadow-color);
   position: sticky;

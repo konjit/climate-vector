@@ -5,6 +5,11 @@ import { useEffect } from "react";
 
 import "../styles/Charts.css";
 
+/**
+ * The factorOptions object holds different factors that contribute to climate change. 
+ * For each factor, it lists the available data types that can be selected for analysis.
+ */
+
 const factorOptions = {
   co2: [
     "monthly_ml",

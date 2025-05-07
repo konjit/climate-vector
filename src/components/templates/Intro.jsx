@@ -1,6 +1,8 @@
 import { Globe, Thermometer, AlertTriangle } from "lucide-react";
-import greenhouseAnimation from "../../assets/greenhouse-effect.gif";
 import { Tooltip } from "react-tooltip";
+
+import greenhouseAnimation from "../../assets/greenhouse-effect.gif";
+
 import "../../styles/Intro.css";
 
 const Intro = () => {
@@ -9,12 +11,12 @@ const Intro = () => {
       <div className="content">
         <div className="text-content">
           <h1>
-            <Globe size={28} />
+            <Globe size={28} color="var(--primary-color)"/>
             Climate Change 
           </h1>
 
           <div className="paragraph">
-            <Thermometer size={44} />
+            <Thermometer size={44} color="var(--primary-color)"/>
             <p>
               Global temperatures have risen by about{" "}
               <span className="temp-color">1.1°C </span>since pre-industrial
@@ -24,7 +26,7 @@ const Intro = () => {
           </div>
 
           <div className="highlight">
-            <AlertTriangle size={44} />
+            <AlertTriangle size={44} color="var(--primary-color)"/>
             <div>
               <p>
                 If we keep going like we are{" "}

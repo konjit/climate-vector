@@ -50,6 +50,6 @@ footer {
   color: var(--primary-color);
   background-color: #fff;
   box-shadow: 2px 0 4px var(--nav-box-shadow-color);
-  background-color: var(--bg-color);
+  background-color: var(--surface-color);
   margin-top: 2rem;
 }

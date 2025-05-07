@@ -13,6 +13,7 @@ It shows how greenhouse gases have increased; mostly because of human activities
 - Shows air quality of user's location or searched city using coordinates or city name  
 - Let the user to choose a theme of their preference with toggle
 - Let the users use tooltips to explain potentially unfamiliar words to the user
+- Let the users able to see more details about factors with show/hide button 
 
 ## Tech Used
 

@@ -67,3 +67,11 @@
   padding: 1rem 1rem;
   border: none;
 }
+
+.aqi-good {
+  background-color: var(--positive-accent);
+}
+
+.aqi-not-good {
+  background-color: var(--negative-accent);
+}
