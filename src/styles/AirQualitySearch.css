@@ -26,6 +26,7 @@
   background-color: var(--surface-color);
   box-sizing: border-box;
   caret-color: var(--text-color);
+  color: var(--text-color);
 }
 
 .air-quality-city::placeholder {
@@ -34,4 +35,7 @@
 
 .air-quality-city:focus {
   border: 1px solid var(--primary-color);
+}
+.no-data{
+  color: var(--text-color);
 }

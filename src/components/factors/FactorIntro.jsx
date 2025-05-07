@@ -13,8 +13,8 @@ const FactorIntro = () => {
     <section className="chart-intro">
       <article>
         <h1>
-          <Factory size={24} color="var(--primary-color)" /> Greenhouse Gas
-          Trends & Temperature Anomalies
+          <Factory size={24} color="var(--primary-color)" /> Climate &
+          Atmospheric Trends
         </h1>
 
         <p>
@@ -23,13 +23,12 @@ const FactorIntro = () => {
             color="var(--primary-color)"
             style={{ marginRight: "6px", verticalAlign: "middle" }}
           />
-          This page helps you to see the trend of atmospheric greenhouse gases (
-          <span className="co2-color"> CO₂</span>,{" "}
+          Explore long-term trends in greenhouse gases (
+          <span className="co2-color">CO₂</span>,{" "}
           <span className="ch4-color">CH₄</span>,{" "}
-          <span className="n2o-color">N₂O</span>, and{" "}
-          <span className="sf6-color">SF₆</span>) using long-term data from NOAA
-          and NASA. You can explore both global and location-based records,
-          covering decades of climate trends.
+          <span className="n2o-color">N₂O</span>,{" "}
+          <span className="sf6-color">SF₆</span>), temperature, sea level, and
+          ice loss using data from NOAA and other global sources.
         </p>
 
         <p>
@@ -38,9 +37,8 @@ const FactorIntro = () => {
             size={18}
             style={{ marginRight: "6px", verticalAlign: "middle" }}
           />
-          Choose between monthly, annual, or increase rate views for each gas.
-          The data is presented with clear line charts that highlight seasonal
-          patterns and long-term shifts.
+          View data by month, year, or growth rate across different regions and
+          indicators.
         </p>
 
         <p>
@@ -49,9 +47,8 @@ const FactorIntro = () => {
             color="var(--primary-color)"
             style={{ marginRight: "6px", verticalAlign: "middle" }}
           />
-          Track the growth of key greenhouse gases over time. Charts display
-          Mauna Loa Observatory data and global averages, helping users
-          understand the scale of emissions.
+          Track emissions and environmental changes globally, including Mauna
+          Loa and worldwide averages.
         </p>
 
         <p>
@@ -60,9 +57,8 @@ const FactorIntro = () => {
             color="var(--primary-color)"
             style={{ marginRight: "6px", verticalAlign: "middle" }}
           />
-          Global temperature anomalies show how much Earth's temperature has
-          deviated from historical norms. The dashboard displays daily, monthly,
-          and annual trends, including the current +1.2°C rise since 1880.
+          Monitor temperature anomalies and trends, including daily, monthly,
+          and annual global averages.
         </p>
 
         <p>
@@ -71,9 +67,8 @@ const FactorIntro = () => {
             color="var(--primary-color)"
             style={{ marginRight: "6px", verticalAlign: "middle" }}
           />
-          Data visualizations include both land and ocean temperatures. Despite
-          short-term fluctuations, the long-term trend clearly indicates ongoing
-          global warming, with 2023 recorded as the hottest year to date.
+          Visualizations also show ocean temperature, sea level rise, and ice
+          mass loss in Antarctica and Greenland.
         </p>
       </article>
     </section>

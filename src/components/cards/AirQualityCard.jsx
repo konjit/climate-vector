@@ -3,6 +3,24 @@ import { Tooltip } from "react-tooltip";
 
 import "../../styles/AirQualityCard.css";
 
+// To give a user feedback based on the OpenWeatherAPI indexing for quality of air.
+const getAqiLabel = (aqi) => {
+  switch (aqi) {
+    case 1:
+      return "Good";
+    case 2:
+      return "Fair";
+    case 3:
+      return "Moderate";
+    case 4:
+      return "Poor";
+    case 5:
+      return "Very Poor";
+    default:
+      return "Unknown";
+  }
+};
+
 const AirQualityCard = ({ city, data }) => {
   const components = data.list[0].components;
   const aqi = data.list[0].main.aqi;
@@ -10,15 +28,32 @@ const AirQualityCard = ({ city, data }) => {
   return (
     <div className="card-air">
       <div className="card-air-header">
-        <h3 className="city-header">
+        <h3 className="city-header"> Air Quality Index in  {" "}
           {city[0].name}'s, in {city[0].country}{" "}
         </h3>
       </div>
 
       <div className="card-air-body">
-        <div className={`pollutant ${aqi < 2 ? "aqi-good" : "aqi-not-good"}`}>
+        <div
+          className={`pollutant ${
+            aqi === 1
+              ? "aqi-good"
+              : aqi === 2
+              ? "aqi-fair"
+              : aqi === 3
+              ? "aqi-moderate"
+              : aqi === 4
+              ? "aqi-poor"
+              : aqi === 5
+              ? "aqi-very-poor"
+              : "aqi-unknown"
+          }`}
+        >
           <Wind size={18} color="var(--primary-color)" />
-          <span data-tooltip-id="aqi">AQI: {aqi} </span>
+          <span data-tooltip-id="aqi">
+            {" "}
+            {aqi} AQI: {getAqiLabel(aqi)}
+          </span>
           <Tooltip id="aqi" place="top" effect="solid">
             Air Quality Index (1 = Good, 5 = Very Poor)
           </Tooltip>
