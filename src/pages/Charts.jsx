@@ -50,7 +50,7 @@ function Charts() {
     <>
       <FactorIntro />
 
-      <div className="input-group">
+      <section className="input-group">
         <select onChange={({ target }) => setFactor(target.value)}>
           {Object.keys(factorOptions).map((factor) => (
             <option key={factor} value={factor}>
@@ -61,7 +61,7 @@ function Charts() {
         <select onChange={({ target }) => setQuery(target.value)}>
           {factorOptions[factor]?.map((query) => (
             <option key={query} value={query}>
-              {query.toUpperCase()}
+              {query}
             </option>
           ))}
         </select>
@@ -72,13 +72,13 @@ function Charts() {
             </option>
           ))}
         </select>
-      </div>
+      </section>
 
-      <div className="gases-chart-container">
+      <section className="gases-chart-container">
         <div className="gas-card">
           <FactorData query={query} factor={factor} color={color} />
         </div>
-      </div>
+      </section>
     </>
   );
 }

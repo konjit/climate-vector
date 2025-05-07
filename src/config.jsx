@@ -21,6 +21,6 @@
 
 export const ROOT_END_POINT = "https://climatemonitor.info/api/public/v1";
 
-
+// Other API resources 
 export const OWM_AIR_POLLUTION = "https://api.openweathermap.org/data/2.5";
 export const OWM_GEO_LOCATION = "https://api.openweathermap.org/geo/1.0";

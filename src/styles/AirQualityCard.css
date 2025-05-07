@@ -69,9 +69,17 @@
 }
 
 .aqi-good {
-  background-color: var(--positive-accent);
+  background-color: var(--aqi-good);
 }
-
-.aqi-not-good {
-  background-color: var(--negative-accent);
+.aqi-fair{
+  background-color: var(--aqi-fair);
+}
+.aqi-moderate {
+  background-color: var(--aqi-moderate);
+}
+.aqi-poor {
+  background-color: var(--aqi-poor);
+}
+.aqi-very-poor {
+  background-color: var(--aqi-very-poor);
 }

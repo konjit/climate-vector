@@ -13,10 +13,9 @@ function App() {
     <>
       <Navbar />
       <main>
-      <div className="search-wrapper">
-        <AirQualitySearch />
-      </div>
-     
+        <section className="search-wrapper">
+          <AirQualitySearch />
+        </section>
         <Routes>
           <Route path="/" element={<InfoBoard />} />
           <Route path="/infoboard" element={<InfoBoard />} />

@@ -7,11 +7,16 @@ import {
   CartesianGrid,
   Tooltip,
 } from "recharts";
+import Loading from "../templates/Loading";
+
+/**
+ * This component renders a chart using the provided data and applies the specified color
+ * to the chart's area and lines.
+ */
 
 const CustomAreaChart = ({ data: factorData, color, dataKey = "value" }) => {
+  if (!factorData?.data) return <Loading />;
 
-  if (!factorData?.data) return <div>No data</div>;
-  
   const {
     data: { readings, title, description, unit, lastUpdate },
   } = factorData;
@@ -64,8 +69,8 @@ const CustomAreaChart = ({ data: factorData, color, dataKey = "value" }) => {
 
           <CartesianGrid
             strokeDasharray="3 3"
-            stroke="#f0f0f0"
-            vertical={false}
+            stroke="var( --surface-hover-color)"
+            vertical={true}
           />
 
           <XAxis
@@ -94,7 +99,7 @@ const CustomAreaChart = ({ data: factorData, color, dataKey = "value" }) => {
             formatter={(value) => [`${value} ${unit}`, "Unit"]}
             labelFormatter={(label) => {
               const [year, month] = label.split("-");
-              return `${month}/${year}`;
+              return `Year: ${month}/${year}`;
             }}
             contentStyle={{
               background: "rgba(255, 255, 255, 0.98)",
@@ -117,7 +122,7 @@ const CustomAreaChart = ({ data: factorData, color, dataKey = "value" }) => {
       <div
         style={{
           fontSize: 10,
-          color: "#999",
+          color: "var(--text-color)",
           textAlign: "right",
           marginTop: 4,
         }}

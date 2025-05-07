@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import { Bell } from "lucide-react";
 import ThemeToggle from "../../theme/ThemeToggle";
 
 import "../../styles/Navbar.css";
@@ -44,14 +43,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <div className="theme-toggle-container">
-          <Bell
-            size={20}
-            style={{
-              color: "var(--primary-color)",
-            }}
-          />
-        </div>
+
         <div className="theme-toggle-container">
           <ThemeToggle checked={isDark} onChange={setIsDark} />
         </div>
