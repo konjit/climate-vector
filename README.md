@@ -28,7 +28,7 @@ It shows how greenhouse gases have increased; mostly because of human activities
 
 - [ClimateMonitor API](https://climatemonitor.info/api/public/v1) – for CO₂, CH₄, N₂O, SF₆ levels, temperature anomalies, glacier and ocean mass loss  
 - [OpenWeather Air Pollution API](https://openweathermap.org/api/air-pollution) – for air quality by coordinates or city name  
-
+- [Climate Vector deployed on Netlify](https://climate-vector.netlify.app/)
 ---
 
 This app is still improving, more features and visuals will be added over time.
